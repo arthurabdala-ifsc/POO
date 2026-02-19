@@ -1,6 +1,22 @@
 public class OlaMundo {
 
-    public static void main(String[] args) {
-        System.out.println("Ola, mundo!");
+    void main() {
+        // IO.println("Ola, mundo!");
+        
+        int i = 2;
+        String s = "";
+
+        switch (i) {
+            case 1:
+                s = "Um";
+                break;
+            default:
+                s = "Outro";
+                break;
+        }
+
+        IO.println(s);
+
+
     }
 }

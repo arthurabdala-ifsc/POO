@@ -15,6 +15,10 @@ public class Telefone {
         this.codigo = codigo;
     }
 
+    public String getModelo() {
+        return modelo;
+    }
+
     @Override
     public String toString() {
         return "Codigo: " + codigo +

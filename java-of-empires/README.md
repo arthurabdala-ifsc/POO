@@ -3,6 +3,7 @@
 ```mermaid
 classDiagram
     class Personagem{
+        <<abstract>>
         - vida: int
         - ataque: int
         - velocidade: double

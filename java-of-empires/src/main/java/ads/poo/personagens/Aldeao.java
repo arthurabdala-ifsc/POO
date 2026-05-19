@@ -1,6 +1,6 @@
 package ads.poo.personagens;
 
-public class Aldeao extends Personagem {
+public class Aldeao extends Personagem implements Guerreiro {
     public Aldeao() {
         super(25,1,0.8);
     }

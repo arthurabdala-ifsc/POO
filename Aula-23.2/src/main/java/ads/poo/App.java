@@ -4,6 +4,8 @@ package ads.poo;
 import edu.princeton.cs.algs4.Draw;
 import edu.princeton.cs.algs4.DrawListener;
 
+import java.util.Random;
+
 public class App implements DrawListener {
 
     private Draw draw;
@@ -21,7 +23,8 @@ public class App implements DrawListener {
 
     @Override
     public void mouseClicked(double x, double y){
-        this.draw.picture(x, y,"cartas/1p.png");
+        String enderecoCarta = "cartas/" + sortearCarta();
+        this.draw.picture(x, y,enderecoCarta);
         this.draw.show();
     }
 
@@ -29,5 +32,19 @@ public class App implements DrawListener {
 
         App app = new App();
 
+    }
+
+    public String sortearCarta(){
+        Random sorteio = new Random();
+
+        Numero[] numeros = Numero.values();
+        Naipe[] naipes = Naipe.values();
+
+        Numero numero = numeros[sorteio.nextInt(numeros.length)];
+        Naipe naipe = naipes[sorteio.nextInt(naipes.length)];
+
+        Carta carta = new Carta(numero,naipe);
+
+        return carta.toString();
     }
 }
